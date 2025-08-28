@@ -32,9 +32,7 @@ class CustomerService {
 
         } catch (err) {
             throw new APIError('Data Not found', err)
-        }
-
-       
+        }       
     }
 
     async SignUp(userInputs){
@@ -158,6 +156,8 @@ class CustomerService {
             case 'CREATE_ORDER':
                 this.ManageOrder(userId,order);
                 break;
+            case 'TEST':
+                console.log("Working")
             default:
                 break;
         }
